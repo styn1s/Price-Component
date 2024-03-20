@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
-body{
+html, body{
     margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Karla;
-    background-color: hsl(217, 100%, 90%);  
+    background-color: hsl(217, 100%, 90%);
 }
 .container{
     border: 1px solid gray;
     width: 45em;
-    margin: auto;
-    margin-top: 60px;
     height: 469px;
     border-radius: 10px;
     border: none;
@@ -120,17 +122,17 @@ ul{
     list-style-type: none;
 }
 
-@media only screen and (max-width: 700px){
-    body{
-        height: 56em;
+@media screen and (max-width: 700px){
+    html, body{
+        height: auto;
     }
     a{
-        width: 100%;
-        
+        width: 102%;  
     }
     .container{
         width: 25em;
-        margin-bottom: 200px;
+        height: auto;
+        margin: 50px 0;
     }
     .container-2{
         display: block;  
@@ -161,9 +163,7 @@ ul{
 }
 
 @media only screen and (max-width: 420px){
-    body{
-        height: 59em;
-    }
+    
     .container, #section-1, #section-2{
         width: 20em;
     }
@@ -173,7 +173,7 @@ ul{
     }
 
     a{
-        width: 73%;
+        width: 74%;
     }
     
 }
