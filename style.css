@@ -5,9 +5,10 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Karla;
+    font-family: 'Karla';
     background-color: hsl(217, 100%, 90%);
 }
+
 .container{
     border: 1px solid gray;
     width: 45em;
@@ -15,31 +16,33 @@ html, body{
     border-radius: 10px;
     border: none;
 }
+
 .container-2{
     display: flex;
     position: relative;
 }
-#main-header{
+
+.main-header{
     background-color: white;
     padding: 20px 20px 30px 40px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
-    h1{
-        color: hsl(179, 62%, 43%);
-    }
-
-    h3{
-        color: hsl(71, 73%, 54%);
-    }
-
-    p{
-        color: hsl(200, 1%, 61%);
-        padding-right: 50px;
-    }
-
 }
-#section-1{
+
+.main-header h1{
+    color: hsl(179, 62%, 43%);
+}
+
+.main-header h3{
+    color: hsl(71, 73%, 54%);
+}
+
+.main-header p{
+    color: hsl(200, 1%, 61%);
+    padding-right: 50px;
+}
+
+.section-1{
     width: 50%;
     height: 16em;
     padding-top: 0.5em;
@@ -47,44 +50,62 @@ html, body{
     color: white;
     border-bottom-left-radius: 10px;
 }
-#section-2{
+
+.section-2{
     width: 50%;
     padding-top: 0.5em;
     background-color: hsl(179, 46%, 52%);
     color: white;
     border-bottom-right-radius: 10px;
 }
-.wrapper-1, .wrapper-2{
 
-    width: 250px;   
-
-    h1, h2, p, ul{
-        padding-left:0px;
-    }
-
-    h2{
-        margin-top: 0;
-        font-size: 18px;
-    }
-
-    a{
-        display: flex;
-        justify-content: center;
-        margin: 33px 0 0;
-        padding: 15px 15px;
-        border: 2px solid hsl(71, 73%, 54%);
-        border-radius: 0.3em;
-        background-color: hsl(71, 73%, 54%);
-        color: white;
-        text-decoration: none;
-        box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.5);
-        font-weight: bold;
-    }
-    a:hover{
-        border: 2px solid hsl(71, 74%, 47%);
-        background-color: hsl(71, 74%, 47%);
-    }
+.wrapper-1, 
+.wrapper-2{
+    width: 280px;
+    height: 200px;
+    margin: 20px 0px 0px 40px;
 }
+
+.wrapper-1 h2,
+.wrapper-2 h2{
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.wrapper-1{
+    position: relative;
+}
+
+.wrapper-1 h1{
+    margin-bottom: 7px;
+}
+
+.wrapper-1 a{
+    display: flex;
+    justify-content: center;
+    margin: 33px 0 0;
+    padding: 15px 15px;
+    border: 2px solid hsl(71, 73%, 54%);
+    border-radius: 0.3em;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.5);
+    font-weight: bold;
+}
+
+.wrapper-1 a:hover{
+    border: 2px solid hsl(71, 74%, 47%);
+    background-color: hsl(71, 74%, 47%);
+}
+
+.wrapper-2 ul{
+    padding-left: 0px;
+    line-height: 1.4;
+    color: rgb(178, 242, 247);
+    list-style-type: none;
+}
+
 #month{
     position: absolute;
     font-size: 16px;
@@ -92,88 +113,72 @@ html, body{
     font-weight: 400;
     top: 17px;
     left: 80px;
-
 }
+
 #amount{
     font-size: 1.5em;
 }
+
 #access{
     margin: 0;
 }
-.wrapper-1{
-    position: relative;
-    margin: 20px auto;
-    height: 200px;
-    margin-left: 40px;
-    width: 280px;
 
-    h1{
-        margin-bottom: 7px;
-    }
-    
-}
-.wrapper-2{
-    margin: 20px auto 0;
-    height: 200px;
-}
-ul{
-    line-height: 1.4;
-    color: rgb(178, 242, 247);
-    list-style-type: none;
-}
-
-@media screen and (max-width: 700px){
+@media screen and (max-width: 730px){
     html, body{
         height: auto;
     }
-    a{
-        width: 102%;  
-    }
+
     .container{
         width: 25em;
         height: auto;
         margin: 50px 0;
     }
+
     .container-2{
         display: block;  
     }
-    .wrapper-2{
-        margin-left: 40px;
 
-        ul{
-            margin-bottom: 0;
-            margin-top: 1.5em;
-        }
-    }
-    #description{
-        line-height: 1.6;
-    }
-    #section-1, #section-2{
+    .section-1, .section-2{
         width: 25em;
     }
-    #section-1{
+
+    .section-1{
         border-bottom-left-radius: 0;
     }
-    #section-2{
+
+    .section-2{
         height: 16em;
         border-bottom-left-radius: 10px;
     }
-    
-    
+
+    .wrapper-1 a{
+        width: 102%;
+    }
+
+    .wrapper-2{
+        margin-left: 40px;
+    }
+
+    .wrapper-2 ul{
+        margin-bottom: 0;
+        margin-top: 1.5em;
+    }
+
+    #description{
+        line-height: 1.6;
+    }
 }
 
-@media only screen and (max-width: 420px){
-    
-    .container, #section-1, #section-2{
+@media screen and (max-width: 420px){
+    .container, .section-1, .section-2{
         width: 20em;
     }
 
-    p#description{
-        padding-right: 20px;
-    }
-
-    a{
+    .wrapper-1 a{
         width: 74%;
     }
-    
+
+    #description{
+        padding-right: 20px;
+    }
 }
