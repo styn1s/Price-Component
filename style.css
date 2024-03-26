@@ -6,15 +6,19 @@ html, body{
     justify-content: center;
     align-items: center;
     font-family: 'Karla';
-    background-color: hsl(217, 100%, 90%);
+    background-color: hsl(204, 43%, 93%);
+}
+
+.container, .container-2{
+    width: 650px;
 }
 
 .container{
     border: 1px solid gray;
-    width: 45em;
-    height: 469px;
+    height: auto;
     border-radius: 10px;
     border: none;
+    box-shadow: 0 15px 15px lightgray;
 }
 
 .container-2{
@@ -40,12 +44,13 @@ html, body{
 .main-header p{
     color: hsl(200, 1%, 61%);
     padding-right: 50px;
+    line-height: 1.5;
 }
 
 .section-1{
     width: 50%;
     height: 16em;
-    padding-top: 0.5em;
+    padding-top: 1em;
     background-color: hsl(179, 62%, 43%);
     color: white;
     border-bottom-left-radius: 10px;
@@ -53,7 +58,7 @@ html, body{
 
 .section-2{
     width: 50%;
-    padding-top: 0.5em;
+    padding-top: 1em;
     background-color: hsl(179, 46%, 52%);
     color: white;
     border-bottom-right-radius: 10px;
@@ -61,9 +66,9 @@ html, body{
 
 .wrapper-1, 
 .wrapper-2{
-    width: 280px;
+    width: 240px;
     height: 200px;
-    margin: 20px 0px 0px 40px;
+    margin: 20px auto 0 auto;
 }
 
 .wrapper-1 h2,
@@ -121,6 +126,7 @@ html, body{
 
 #access{
     margin: 0;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 730px){
@@ -128,18 +134,17 @@ html, body{
         height: auto;
     }
 
-    .container{
+    .container, .container-2, .section-1, .section-2{
         width: 25em;
+    }
+
+    .container{
         height: auto;
         margin: 50px 0;
     }
 
     .container-2{
-        display: block;  
-    }
-
-    .section-1, .section-2{
-        width: 25em;
+        display: block;
     }
 
     .section-1{
@@ -151,8 +156,9 @@ html, body{
         border-bottom-left-radius: 10px;
     }
 
-    .wrapper-1 a{
-        width: 102%;
+    .wrapper-1{
+        width: 320px;
+        margin: 20px auto 0 auto;
     }
 
     .wrapper-2{
@@ -164,18 +170,28 @@ html, body{
         margin-top: 1.5em;
     }
 
+    .main-header h1{
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+
+    .main-header h3{
+        margin-top: 30px;
+    }
+
     #description{
         line-height: 1.6;
     }
 }
 
 @media screen and (max-width: 420px){
-    .container, .section-1, .section-2{
+    .container, .container-2, .section-1, .section-2{
         width: 20em;
     }
 
-    .wrapper-1 a{
-        width: 74%;
+    .wrapper-1{
+        width: 240px;
+        margin: 20px auto 0;
     }
 
     #description{
