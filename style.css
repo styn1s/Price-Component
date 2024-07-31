@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
 html, body{
     margin: 0;
     height: 100%;
@@ -9,11 +10,8 @@ html, body{
     background-color: hsl(204, 43%, 93%);
 }
 
-.container, .container-2{
-    width: 650px;
-}
-
-.container{
+main{
+    width: 700px;
     border: 1px solid gray;
     height: auto;
     border-radius: 10px;
@@ -21,71 +19,65 @@ html, body{
     box-shadow: 0 15px 15px lightgray;
 }
 
-.container-2{
+#wrapper{
     display: flex;
     position: relative;
 }
 
-.main-header{
+#join-community{
     background-color: white;
     padding: 20px 20px 30px 40px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.main-header h1{
+#join-community h1{
     color: hsl(179, 62%, 43%);
 }
 
-.main-header h3{
+#join-community h3{
     color: hsl(71, 73%, 54%);
 }
 
-.main-header p{
+#join-community p{
     color: hsl(200, 1%, 61%);
     padding-right: 50px;
     line-height: 1.5;
 }
 
-.section-1{
-    width: 50%;
-    height: 16em;
-    padding-top: 1em;
+#subscription{
     background-color: hsl(179, 62%, 43%);
     color: white;
     border-bottom-left-radius: 10px;
 }
 
-.section-2{
-    width: 50%;
-    padding-top: 1em;
+#why-us{
     background-color: hsl(179, 46%, 52%);
     color: white;
     border-bottom-right-radius: 10px;
 }
 
-.wrapper-1, 
-.wrapper-2{
-    width: 240px;
-    height: 200px;
-    margin: 20px auto 0 auto;
+#subscription, 
+#why-us{
+    width: 100%;
+    padding: 40px 50px 30px;
 }
 
-.wrapper-1 h2,
-.wrapper-2 h2{
+#subscription h2,
+#why-us h2{
     margin-top: 0;
     font-size: 18px;
 }
 
-.wrapper-1{
+#subscription{
     position: relative;
 }
 
-.wrapper-1 h1{
+#subscription h1{
     margin-bottom: 7px;
 }
 
-.wrapper-1 a{
+#subscription a{
     display: flex;
     justify-content: center;
     margin: 33px 0 0;
@@ -99,12 +91,12 @@ html, body{
     font-weight: bold;
 }
 
-.wrapper-1 a:hover{
+#subscription a:hover{
     border: 2px solid hsl(71, 74%, 47%);
     background-color: hsl(71, 74%, 47%);
 }
 
-.wrapper-2 ul{
+#why-us ul{
     padding-left: 0px;
     line-height: 1.4;
     color: rgb(178, 242, 247);
@@ -116,12 +108,14 @@ html, body{
     font-size: 16px;
     color: rgb(125, 227, 235);
     font-weight: 400;
-    top: 17px;
-    left: 80px;
+    top: 8px;
+    left: 75px;
 }
 
 #amount{
-    font-size: 1.5em;
+    position: relative;
+    font-size: 2em;
+    margin-top: 20px;
 }
 
 #access{
@@ -134,54 +128,46 @@ html, body{
         height: auto;
     }
 
-    .container, .container-2, .section-1, .section-2{
+    main{
         width: 25em;
-    }
-
-    .container{
         height: auto;
         margin: 50px 0;
     }
 
-    .container-2{
-        display: block;
-    }
-
-    .section-1{
-        border-bottom-left-radius: 0;
-    }
-
-    .section-2{
-        height: 16em;
-        border-bottom-left-radius: 10px;
-    }
-
-    .wrapper-1{
-        width: 320px;
-        margin: 20px auto 0 auto;
-    }
-
-    .wrapper-2{
-        margin-left: 40px;
-    }
-
-    .wrapper-2 ul{
-        margin-bottom: 0;
-        margin-top: 1.5em;
-    }
-
-    .main-header h1{
+    main h1{
         font-size: 25px;
         margin-bottom: 0;
     }
 
-    .main-header h3{
+    main h3{
         margin-top: 30px;
     }
 
-    #description{
-        line-height: 1.6;
+    #wrapper{
+        display: block;
+        width: 21.25em;
     }
+
+    #join-community{
+        padding: 20px 30px 30px;
+    }
+
+    #join-community p{
+        line-height: 2em;
+        padding: 0;
+    }
+
+    #subscription{
+        padding: 40px 30px;
+        border-bottom-left-radius: 0;
+    }
+
+    #why-us{
+        padding: 40px 30px;
+        border-bottom-left-radius: 10px;
+    }
+
+    
 }
 
 @media screen and (max-width: 420px){
