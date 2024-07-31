@@ -166,21 +166,15 @@ main{
         padding: 40px 30px;
         border-bottom-left-radius: 10px;
     }
-
-    
 }
 
 @media screen and (max-width: 420px){
-    .container, .container-2, .section-1, .section-2{
+    main, #wrapper{
         width: 20em;
     }
 
-    .wrapper-1{
-        width: 240px;
-        margin: 20px auto 0;
-    }
-
-    #description{
-        padding-right: 20px;
+    #subscription, #why-us {
+        padding: 20px 30px 30px;
+        box-sizing: border-box;
     }
 }
