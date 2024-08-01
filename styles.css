@@ -1,180 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 
-html, body{
-    margin: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Karla';
-    background-color: hsl(204, 43%, 93%);
+:root{
+  --primary-color: hsl(179, 62%, 43%);
+  --heading-color: hsl(71, 73%, 54%);
+  --light-color: white;
 }
 
-main{
-    width: 700px;
-    border: 1px solid gray;
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  font-family: "Karla";
+  background-color: hsl(204, 43%, 93%);
+}
+
+main {
+  width: 700px;
+  height: auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 15px 15px lightgray;
+}
+
+.join-community {
+  padding: 20px 20px 30px 40px;
+  background-color: var(--light-color);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.join-community h1 {
+  color: var(--primary-color);
+}
+
+.join-community h3 {
+  color: var(--heading-color);
+}
+
+.join-community p {
+  padding-right: 50px;
+  line-height: 1.5;
+  color: hsl(200, 1%, 61%);
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+}
+
+.subscription,
+.why-us {
+  width: 100%;
+  padding: 40px 50px 30px;
+}
+
+.subscription h2,
+.why-us h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.subscription {
+  position: relative;
+  color: var(--light-color);
+  background-color: var(--primary-color);
+  border-bottom-left-radius: 10px;
+}
+
+.subscription h1 {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 7px;
+  font-size: 2em;
+}
+
+.subscription p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.why-us {
+  color: var(--light-color);
+  background-color: hsl(179, 46%, 52%);
+  border-bottom-right-radius: 10px;
+}
+
+.why-us ul {
+  padding-left: 0px;
+  line-height: 1.4;
+  list-style-type: none;
+  color: #b2f2f7;
+}
+
+.sign-up-btn {
+  display: flex;
+  justify-content: center;
+  margin: 33px 0 0;
+  padding: 15px 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--light-color);
+  background-color: var(--heading-color);
+  border-radius: 0.3em;
+  box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.5);
+}
+
+.sign-up-btn:hover {
+  background-color: hsl(71, 74%, 47%);
+}
+
+.month {
+  position: absolute;
+  top: 8px;
+  left: 75px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(125, 227, 235);
+}
+
+@media screen and (max-width: 730px) {
+  html,
+  body {
     height: auto;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 15px 15px lightgray;
-}
+  }
 
-#wrapper{
-    display: flex;
-    position: relative;
-}
+  main {
+    width: 25em;
+    height: auto;
+    margin: 50px 0;
+  }
 
-#join-community{
-    background-color: white;
-    padding: 20px 20px 30px 40px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+  main h1 {
+    margin-bottom: 0;
+    font-size: 25px;
+  }
 
-#join-community h1{
-    color: hsl(179, 62%, 43%);
-}
+  main h3 {
+    margin-top: 30px;
+  }
 
-#join-community h3{
-    color: hsl(71, 73%, 54%);
-}
+  .wrapper {
+    display: block;
+    width: 21.25em;
+  }
 
-#join-community p{
-    color: hsl(200, 1%, 61%);
-    padding-right: 50px;
-    line-height: 1.5;
-}
+  .join-community {
+    padding: 20px 30px 30px;
+  }
 
-#subscription{
-    background-color: hsl(179, 62%, 43%);
-    color: white;
+  .join-community p {
+    padding: 0;
+    line-height: 2em;
+  }
+
+  .subscription {
+    padding: 40px 30px;
+    border-bottom-left-radius: 0;
+  }
+
+  .why-us {
+    padding: 40px 30px;
     border-bottom-left-radius: 10px;
+  }
 }
 
-#why-us{
-    background-color: hsl(179, 46%, 52%);
-    color: white;
-    border-bottom-right-radius: 10px;
-}
+@media screen and (max-width: 420px) {
+  main,
+  .wrapper {
+    width: 20em;
+  }
 
-#subscription, 
-#why-us{
-    width: 100%;
-    padding: 40px 50px 30px;
-}
-
-#subscription h2,
-#why-us h2{
-    margin-top: 0;
-    font-size: 18px;
-}
-
-#subscription{
-    position: relative;
-}
-
-#subscription h1{
-    margin-bottom: 7px;
-}
-
-#subscription a{
-    display: flex;
-    justify-content: center;
-    margin: 33px 0 0;
-    padding: 15px 15px;
-    border: 2px solid hsl(71, 73%, 54%);
-    border-radius: 0.3em;
-    background-color: hsl(71, 73%, 54%);
-    color: white;
-    text-decoration: none;
-    box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.5);
-    font-weight: bold;
-}
-
-#subscription a:hover{
-    border: 2px solid hsl(71, 74%, 47%);
-    background-color: hsl(71, 74%, 47%);
-}
-
-#why-us ul{
-    padding-left: 0px;
-    line-height: 1.4;
-    color: rgb(178, 242, 247);
-    list-style-type: none;
-}
-
-#month{
-    position: absolute;
-    font-size: 16px;
-    color: rgb(125, 227, 235);
-    font-weight: 400;
-    top: 8px;
-    left: 75px;
-}
-
-#amount{
-    position: relative;
-    font-size: 2em;
-    margin-top: 20px;
-}
-
-#access{
-    margin: 0;
-    font-size: 16px;
-}
-
-@media screen and (max-width: 730px){
-    html, body{
-        height: auto;
-    }
-
-    main{
-        width: 25em;
-        height: auto;
-        margin: 50px 0;
-    }
-
-    main h1{
-        font-size: 25px;
-        margin-bottom: 0;
-    }
-
-    main h3{
-        margin-top: 30px;
-    }
-
-    #wrapper{
-        display: block;
-        width: 21.25em;
-    }
-
-    #join-community{
-        padding: 20px 30px 30px;
-    }
-
-    #join-community p{
-        line-height: 2em;
-        padding: 0;
-    }
-
-    #subscription{
-        padding: 40px 30px;
-        border-bottom-left-radius: 0;
-    }
-
-    #why-us{
-        padding: 40px 30px;
-        border-bottom-left-radius: 10px;
-    }
-}
-
-@media screen and (max-width: 420px){
-    main, #wrapper{
-        width: 20em;
-    }
-
-    #subscription, #why-us {
-        padding: 20px 30px 30px;
-        box-sizing: border-box;
-    }
+  .subscription,
+  .why-us {
+    padding: 20px 30px 30px;
+    box-sizing: border-box;
+  }
 }

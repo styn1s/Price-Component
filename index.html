@@ -3,32 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
     <title>Price Component</title>
+    <meta
+      name="description"
+      content="Join our community and gain access to a full library of tutorials with expert code reviews. 
+              Perfect for developers serious about honing their skills."
+    />
+    <meta
+      name="keywords"
+      content="programming, tutorials, code reviews, community, subscription"
+    />
+    <meta name="author" content="Styn1s" />
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <main>
-      <section id="join-community">
-        <h1>Join our community</h1>
-        <h3>30-day, hassle-free money back guarantee</h3>
-        <p id="description">
-          Gain access to our full library of tutorials along with expert code
-          reviews. Perferct for any developers who are serious about honing
-          their skills.
-        </p>
-      </section>
-
-      <div id="wrapper">
-        <section id="subscription">
-          <h2>Monthly Subscription</h2>
-          <h1 id="amount">$29<span id="month">per month</span></h1>
-          <p id="access">Full access for less than $1 a day</p>
-          <a href="#sign-up">Sign Up</a>
+      <article>
+        <section class="join-community" aria-labelledby="join-heading" aria-describedby="join-description">
+          <h1 id="join-heading">Join our community</h1>
+          <h3 id="join-description">30-day, hassle-free money back guarantee</h3>
+          <p>
+            Gain access to our full library of tutorials along with expert code
+            reviews. Perfect for any developers who are serious about honing
+            their skills.
+          </p>
         </section>
-  
-        <section id="why-us">
-          <h2>Why Us</h2>
+        <div class="wrapper">
+          <section class="subscription" aria-labelledby="subscription-heading">
+            <h2 id="subscription-heading">Monthly Subscription</h2>
+            <h1>$29<span class="month">per month</span></h1>
+            <p>Full access for less than $1 a day</p>
+            <a href="#sign-up" class="sign-up-btn" role="button">Sign Up</a>
+          </section>
+          <section class="why-us" aria-labelledby="why-us-heading">
+            <h2 id="why-us-heading">Why Us</h2>
             <ul>
               <li>Tutorials by industry experts</li>
               <li>Peer & expert code review</li>
@@ -38,9 +47,9 @@
               <li>Flashcard decks</li>
               <li>New videos every week</li>
             </ul>
-        </section>
-      </div>
+          </section>
+        </div>
+      </article>
     </main>
-
   </body>
 </html>
