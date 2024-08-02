@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
-
 :root {
+  --primary-font: "Karla", "Roboto", sans-serif;
   --primary-color: hsl(179, 62%, 43%);
   --heading-color: hsl(71, 73%, 54%);
   --light-color: white;
@@ -17,7 +16,7 @@ body {
   align-items: center;
   height: 100%;
   margin: 0;
-  font-family: "Karla", "Roboto", sans-serif;
+  font-family: var(--primary-font);
   background-color: var(--background-color);
 }
 
