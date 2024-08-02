@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 
-:root{
+:root {
   --primary-color: hsl(179, 62%, 43%);
   --heading-color: hsl(71, 73%, 54%);
   --light-color: white;
+  --background-color: hsl(204, 43%, 93%);
+  --text-color: hsl(200, 1%, 61%);
+  --why-us-bg: hsl(179, 46%, 52%);
+  --why-us-text: #b2f2f7;
 }
 
 html,
@@ -13,23 +17,23 @@ body {
   align-items: center;
   height: 100%;
   margin: 0;
-  font-family: "Karla";
-  background-color: hsl(204, 43%, 93%);
+  font-family: "Karla", "Roboto", sans-serif;
+  background-color: var(--background-color);
 }
 
 main {
-  width: 700px;
+  width: 43.75rem;
   height: auto;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   box-shadow: 0 15px 15px lightgray;
 }
 
 .join-community {
-  padding: 20px 20px 30px 40px;
+  padding: 1.25rem 1.25rem 1.875rem 2.5rem;
   background-color: var(--light-color);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
 }
 
 .join-community h1 {
@@ -41,9 +45,10 @@ main {
 }
 
 .join-community p {
-  padding-right: 50px;
-  line-height: 1.5;
-  color: hsl(200, 1%, 61%);
+  margin-bottom: 0;
+  padding-right: 3.125rem;
+  line-height: 2rem;
+  color: var(--text-color);
 }
 
 .wrapper {
@@ -54,69 +59,69 @@ main {
 .subscription,
 .why-us {
   width: 100%;
-  padding: 40px 50px 30px;
+  padding: 2.5rem 3.125rem 1.875rem;
 }
 
 .subscription h2,
 .why-us h2 {
   margin-top: 0;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .subscription {
-  position: relative;
   color: var(--light-color);
   background-color: var(--primary-color);
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 0.625rem;
 }
 
 .subscription h1 {
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 7px;
-  font-size: 2em;
+  margin: 1.25rem 0 0.4375rem;
+  font-size: 2rem;
 }
 
 .subscription p {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .why-us {
   color: var(--light-color);
-  background-color: hsl(179, 46%, 52%);
-  border-bottom-right-radius: 10px;
+  background-color: var(--why-us-bg);
+  border-bottom-right-radius: 0.625rem;
 }
 
 .why-us ul {
-  padding-left: 0px;
-  line-height: 1.4;
+  padding-left: 0;
+  line-height: 1.4rem;
   list-style-type: none;
-  color: #b2f2f7;
+  color: var(--why-us-text);
 }
 
 .sign-up-btn {
   display: flex;
   justify-content: center;
-  margin: 33px 0 0;
-  padding: 15px 15px;
+  margin: 2.0625rem 0 0;
+  padding: 0.9375rem;
   font-weight: bold;
   text-decoration: none;
   color: var(--light-color);
   background-color: var(--heading-color);
-  border-radius: 0.3em;
+  border-radius: 0.3rem;
   box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.5);
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .sign-up-btn:hover {
   background-color: hsl(71, 74%, 47%);
+  transform: scale(1.05);
 }
 
 .month {
   position: absolute;
-  top: 8px;
-  left: 75px;
-  font-size: 16px;
+  top: 0.5rem;
+  left: 4.6875rem;
+  font-size: 1rem;
   font-weight: 400;
   color: rgb(125, 227, 235);
 }
@@ -128,54 +133,53 @@ main {
   }
 
   main {
-    width: 25em;
-    height: auto;
-    margin: 50px 0;
+    max-width: 25rem;
+    margin: 3.125rem 0;
   }
 
   main h1 {
     margin-bottom: 0;
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 
   main h3 {
-    margin-top: 30px;
-  }
-
-  .wrapper {
-    display: block;
-    width: 21.25em;
+    margin-top: 1.875rem;
   }
 
   .join-community {
-    padding: 20px 30px 30px;
+    padding: 1.25rem 1.875rem 1.875rem;
   }
 
   .join-community p {
     padding: 0;
-    line-height: 2em;
+    line-height: 2rem;
+  }
+
+  .wrapper {
+    display: block;
+    width: 21.25rem;
   }
 
   .subscription {
-    padding: 40px 30px;
+    padding: 2.5rem 1.875rem;
     border-bottom-left-radius: 0;
   }
 
   .why-us {
-    padding: 40px 30px;
-    border-bottom-left-radius: 10px;
+    padding: 2.5rem 1.875rem;
+    border-bottom-left-radius: 0.625rem;
   }
 }
 
 @media screen and (max-width: 420px) {
   main,
   .wrapper {
-    width: 20em;
+    width: 20rem;
   }
 
   .subscription,
   .why-us {
-    padding: 20px 30px 30px;
+    padding: 1.25rem 1.875rem 1.875rem;
     box-sizing: border-box;
   }
 }
