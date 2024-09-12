@@ -2,11 +2,14 @@
   --primary-font: "Karla", "Roboto", sans-serif;
   --primary-color: hsl(179, 62%, 43%);
   --heading-color: hsl(71, 73%, 54%);
-  --light-color: white;
+  --btn-hover-color: hsl(71, 74%, 47%);
+  --light-color: hsl(0, 0%, 100%);
   --background-color: hsl(204, 43%, 93%);
+  --shadow-color: hsl(0, 0%, 83%);
   --text-color: hsl(200, 1%, 61%);
   --why-us-bg: hsl(179, 46%, 52%);
-  --why-us-text: #b2f2f7;
+  --why-us-text: hsl(184, 81%, 83%);
+  --month-color: 	hsl(184, 73%, 71%);
 }
 
 html,
@@ -25,7 +28,7 @@ main {
   height: auto;
   border: none;
   border-radius: 0.625rem;
-  box-shadow: 0 15px 15px lightgray;
+  box-shadow: 0 15px 15px var(--shadow-color);
 }
 
 .join-community {
@@ -112,7 +115,7 @@ main {
 }
 
 .sign-up-btn:hover {
-  background-color: hsl(71, 74%, 47%);
+  background-color: var(--btn-hover-color);
   transform: scale(1.05);
 }
 
@@ -122,7 +125,7 @@ main {
   left: 4.6875rem;
   font-size: 1rem;
   font-weight: 400;
-  color: rgb(125, 227, 235);
+  color: var(--month-color);
 }
 
 @media screen and (max-width: 730px) {
@@ -180,5 +183,12 @@ main {
   .why-us {
     padding: 1.25rem 1.875rem 1.875rem;
     box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main,
+  .wrapper {
+    width: 18rem;
   }
 }
