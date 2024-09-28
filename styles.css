@@ -10,6 +10,7 @@
   --why-us-bg: hsl(179, 46%, 52%);
   --why-us-text: hsl(184, 81%, 83%);
   --month-color: 	hsl(184, 73%, 71%);
+  --btn-shadow-color: hsla(0, 0%, 50%, 0.5);
 }
 
 html,
@@ -23,7 +24,7 @@ body {
   background-color: var(--background-color);
 }
 
-main {
+.main {
   width: 43.75rem;
   height: auto;
   border: none;
@@ -38,24 +39,21 @@ main {
   border-top-right-radius: 0.625rem;
 }
 
-.join-community h1 {
+.join-community__title {
+  font-size: 1.5rem;
   color: var(--primary-color);
 }
 
-.join-community h3 {
+.join-community__description {
+  font-size: 1.1rem;
   color: var(--heading-color);
 }
 
-.join-community p {
+.join-community__text {
   margin-bottom: 0;
   padding-right: 3.125rem;
   line-height: 2rem;
   color: var(--text-color);
-}
-
-.wrapper {
-  position: relative;
-  display: flex;
 }
 
 .subscription,
@@ -64,10 +62,15 @@ main {
   padding: 2.5rem 3.125rem 1.875rem;
 }
 
-.subscription h2,
-.why-us h2 {
+.subscription__title,
+.why-us__title {
   margin-top: 0;
   font-size: 1.125rem;
+}
+
+.subscription-wrapper {
+  position: relative;
+  display: flex;
 }
 
 .subscription {
@@ -76,31 +79,27 @@ main {
   border-bottom-left-radius: 0.625rem;
 }
 
-.subscription h1 {
+.subscription__price {
   position: relative;
   margin: 1.25rem 0 0.4375rem;
   font-size: 2rem;
 }
 
-.subscription p {
+.subscription__month {
+  position: absolute;
+  top: 0.5rem;
+  left: 4.6875rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--month-color);
+}
+
+.subscription__text {
   margin: 0;
   font-size: 1rem;
 }
 
-.why-us {
-  color: var(--light-color);
-  background-color: var(--why-us-bg);
-  border-bottom-right-radius: 0.625rem;
-}
-
-.why-us ul {
-  padding-left: 0;
-  line-height: 1.4rem;
-  list-style-type: none;
-  color: var(--why-us-text);
-}
-
-.sign-up-btn {
+.subscription__sign-up-btn {
   display: flex;
   justify-content: center;
   margin: 2.0625rem 0 0;
@@ -110,22 +109,26 @@ main {
   color: var(--light-color);
   background-color: var(--heading-color);
   border-radius: 0.3rem;
-  box-shadow: 5px 5px 5px rgba(129, 128, 128, 0.5);
+  box-shadow: 5px 5px 5px var(--btn-shadow-color);
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.sign-up-btn:hover {
+.subscription__sign-up-btn:hover {
   background-color: var(--btn-hover-color);
   transform: scale(1.05);
 }
 
-.month {
-  position: absolute;
-  top: 0.5rem;
-  left: 4.6875rem;
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--month-color);
+.why-us {
+  color: var(--light-color);
+  background-color: var(--why-us-bg);
+  border-bottom-right-radius: 0.625rem;
+}
+
+.why-us__list {
+  padding-left: 0;
+  line-height: 1.4rem;
+  list-style-type: none;
+  color: var(--why-us-text);
 }
 
 @media screen and (max-width: 730px) {
@@ -134,30 +137,30 @@ main {
     height: auto;
   }
 
-  main {
+  .main {
     max-width: 25rem;
     margin: 3.125rem 0;
-  }
-
-  main h1 {
-    margin-bottom: 0;
-    font-size: 1.5625rem;
-  }
-
-  main h3 {
-    margin-top: 1.875rem;
   }
 
   .join-community {
     padding: 1.25rem 1.875rem 1.875rem;
   }
 
-  .join-community p {
+  .join-community__title {
+    margin-bottom: 0;
+    font-size: 1.5625rem;
+  }
+
+  .join-community__description {
+    margin-top: 1.875rem;
+  }
+
+  .join-community__text {
     padding: 0;
     line-height: 2rem;
   }
 
-  .wrapper {
+  .subscription-wrapper {
     display: block;
     width: 21.25rem;
   }
@@ -174,8 +177,8 @@ main {
 }
 
 @media screen and (max-width: 420px) {
-  main,
-  .wrapper {
+  .main,
+  .subscription-wrapper {
     width: 20rem;
   }
 
@@ -187,8 +190,8 @@ main {
 }
 
 @media screen and (max-width: 320px) {
-  main,
-  .wrapper {
+  .main,
+  .subscription-wrapper {
     width: 18rem;
   }
 }
